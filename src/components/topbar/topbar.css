@@ -1,18 +1,19 @@
 .topbarContainer {
-    height: 50%;
+    height: 50px;
     width: 100%;
     background-color: #1877f2;
     display: flex;
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 .topbarLeft {
     flex: 3;
 }
 
-.Logo {
+.logo {
     font-size: 24px;
     margin-left: 20px;
     font-weight: bold;
@@ -35,7 +36,7 @@
 
 .searchIcon {
     font-size: 20px !important;
-    margin: 10px;
+    margin-left: 10px;
 }
 
 .searchInput {
@@ -72,7 +73,7 @@
 
 }
 
-.topbarIconbadge {
+.topbarIconBadge {
     height: 15px;
     width: 15px;
     background-color: red;
