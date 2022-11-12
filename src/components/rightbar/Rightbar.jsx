@@ -1,5 +1,7 @@
 import React from 'react'
 import './rightbar.css'
+import {Users} from "../../dummyData"
+import Online from '../online/Online'
 
 export default function Rightbar() {
     return(
@@ -14,34 +16,10 @@ export default function Rightbar() {
                     <img className='rignhtbarAd' src="assets/ad.png" alt="" />
                     <h4 className="rightbarTitle">Online Friends</h4>
                     <ul className="rightbarfriendList">
-                        <li className="rightbarFriend">
-                            <div className="rightbarProfileImgContainer">
-                                <img className='rightbarProfileImg' src="assets/persons/3.jpg" alt="" />
-                                <span className="rightbarOnline"></span>
-                            </div>
-                            <span className="rightbarUsername">John carter</span>
-                        </li>
-                        <li className="rightbarFriend">
-                            <div className="rightbarProfileImgContainer">
-                                <img className='rightbarProfileImg' src="assets/persons/3.jpg" alt="" />
-                                <span className="rightbarOnline"></span>
-                            </div>
-                            <span className="rightbarUsername">John carter</span>
-                        </li>
-                        <li className="rightbarFriend">
-                            <div className="rightbarProfileImgContainer">
-                                <img className='rightbarProfileImg' src="assets/persons/3.jpg" alt="" />
-                                <span className="rightbarOnline"></span>
-                            </div>
-                            <span className="rightbarUsername">John carter</span>
-                        </li>
-                        <li className="rightbarFriend">
-                            <div className="rightbarProfileImgContainer">
-                                <img className='rightbarProfileImg' src="assets/persons/3.jpg" alt="" />
-                                <span className="rightbarOnline"></span>
-                            </div>
-                            <span className="rightbarUsername">John carter</span>
-                        </li>
+                        {Users.map(u=>(
+                            <Online key={u.id} user={u}/>
+                        ))}
+                        
                     </ul>
                 </div>
             </div>
